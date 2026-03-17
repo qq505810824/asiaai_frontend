@@ -1,0 +1,14 @@
+{
+    "name": "aaia-website",
+    "version": "1.0.0",
+    "private": true,
+    "description": "AAIA website + portal with SMTP-backed partnership inquiry form",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "dotenv": "^17.2.3",
+        "express": "^5.1.0",
+        "nodemailer": "^7.0.9"
+    }
+}
