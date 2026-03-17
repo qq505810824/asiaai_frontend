@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="AAIA website portal section for managing frontend UI text and content copy."
-    />
+    <meta name="description" content="AAIA website portal section for managing frontend UI text and content copy." />
     <title>AAIA Portal | Content & Text</title>
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/portal.css" />
-  </head>
-  <body class="portal-page">
+</head>
+
+<body class="portal-page">
     <header class="portal-topbar">
-      <div class="container portal-topbar-inner">
-        <a class="site-logo portal-site-logo" href="portal.html" aria-label="AAIA portal home">
-          <span class="logo-mark portal-logo-fallback" data-portal-logo-fallback aria-hidden="true"></span>
-          <img class="site-logo-image portal-logo-image" data-portal-logo-image src="" alt="AAIA logo" hidden />
-        </a>
-        <a class="btn btn-light" href="index.html">Back to Website</a>
-      </div>
+        <div class="container portal-topbar-inner">
+            <a class="site-logo portal-site-logo" href="portal.html" aria-label="AAIA portal home">
+                <!-- <span class="logo-mark portal-logo-fallback" data-portal-logo-fallback aria-hidden="true"></span> -->
+                <img class="site-logo-image portal-logo-image" src="assets/logos/AAIA-logo.svg" alt="AAIA logo" />
+            </a>
+            <a class="btn btn-light" href="index.html">Back to Website</a>
+        </div>
     </header>
 
     <main class="portal-main">
-      <section class="portal-auth" data-login-view>
-        <div class="portal-card auth-card">
-          <h1>Website Console Login</h1>
-          <p>Sign in with a portal user account to manage website content.</p>
-          <form data-login-form>
-            <div class="field-wrap">
-              <label for="portal-username">Username</label>
-              <input class="input" id="portal-username" name="username" type="text" required />
+        <section class="portal-auth" data-login-view>
+            <div class="portal-card auth-card">
+                <h1>Website Console Login</h1>
+                <p>Sign in with a portal user account to manage website content.</p>
+                <form data-login-form>
+                    <div class="field-wrap">
+                        <label for="portal-username">Username</label>
+                        <input class="input" id="portal-username" name="username" type="text" required />
+                    </div>
+                    <div class="field-wrap">
+                        <label for="portal-password">Password</label>
+                        <input class="input" id="portal-password" name="password" type="password" required />
+                    </div>
+                    <button class="btn btn-primary" type="submit">Login</button>
+                    <p class="portal-status" data-login-status aria-live="polite"></p>
+                </form>
             </div>
-            <div class="field-wrap">
-              <label for="portal-password">Password</label>
-              <input class="input" id="portal-password" name="password" type="password" required />
+        </section>
+
+        <section class="portal-dashboard" data-dashboard-view hidden>
+            <div class="container">
+                <div class="portal-dashboard-head">
+                    <div>
+                        <h1>Frontend Content &amp; UI Text Manager</h1>
+                        <p>Edit homepage, newsroom, detail page, form labels, and footer text from one place.</p>
+                    </div>
+                    <button class="btn btn-outline-plain" type="button" data-logout>Log Out</button>
+                </div>
+
+                <nav class="portal-subnav" aria-label="Portal sections">
+                    <a class="portal-subnav-link" href="portal-branding.html">Branding &amp; Home</a>
+                    <a class="portal-subnav-link" href="portal-partners.html">Partner Logos</a>
+                    <a class="portal-subnav-link" href="portal-news.html">News Manager</a>
+                    <a class="portal-subnav-link active" href="portal-content.html" aria-current="page">Content &amp;
+                        Text</a>
+                    <a class="portal-subnav-link" href="portal-users.html">Users &amp; Security</a>
+                    <a class="portal-subnav-link" href="portal-ircai.html">IRCAI &amp; Placeholder</a>
+                </nav>
+
+                <section class="portal-card">
+                    <h2>4) Frontend Content &amp; UI Text Manager</h2>
+                    <p class="portal-instruction">
+                        Every editable UI text used in the frontend is listed below. Each item includes both English and
+                        Traditional Chinese fields.
+                    </p>
+                    <p class="portal-instruction compact">
+                        Search by section, label, or key. Fill either one language or both, then click Save. Use Reset
+                        to restore default text values.
+                    </p>
+
+                    <div class="upload-actions-row">
+                        <input class="input" type="search" placeholder="Search text fields" data-content-search />
+                        <button class="btn btn-outline-plain" type="button" data-content-reset>Reset to Default
+                            Text</button>
+                    </div>
+
+                    <form class="content-form" data-content-form>
+                        <div class="content-fields" data-content-fields></div>
+                        <div class="form-buttons">
+                            <button class="btn btn-primary" type="submit">Save Content Text</button>
+                        </div>
+                        <p class="portal-status" data-content-status aria-live="polite"></p>
+                    </form>
+                </section>
             </div>
-            <button class="btn btn-primary" type="submit">Login</button>
-            <p class="portal-status" data-login-status aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
-
-      <section class="portal-dashboard" data-dashboard-view hidden>
-        <div class="container">
-          <div class="portal-dashboard-head">
-            <div>
-              <h1>Frontend Content &amp; UI Text Manager</h1>
-              <p>Edit homepage, newsroom, detail page, form labels, and footer text from one place.</p>
-            </div>
-            <button class="btn btn-outline-plain" type="button" data-logout>Log Out</button>
-          </div>
-
-          <nav class="portal-subnav" aria-label="Portal sections">
-            <a class="portal-subnav-link" href="portal-branding.html">Branding &amp; Home</a>
-            <a class="portal-subnav-link" href="portal-partners.html">Partner Logos</a>
-            <a class="portal-subnav-link" href="portal-news.html">News Manager</a>
-            <a class="portal-subnav-link active" href="portal-content.html" aria-current="page">Content &amp; Text</a>
-            <a class="portal-subnav-link" href="portal-users.html">Users &amp; Security</a>
-            <a class="portal-subnav-link" href="portal-ircai.html">IRCAI &amp; Placeholder</a>
-          </nav>
-
-          <section class="portal-card">
-            <h2>4) Frontend Content &amp; UI Text Manager</h2>
-            <p class="portal-instruction">
-              Every editable UI text used in the frontend is listed below. Each item includes both English and Traditional Chinese fields.
-            </p>
-            <p class="portal-instruction compact">
-              Search by section, label, or key. Fill either one language or both, then click Save. Use Reset to restore default text values.
-            </p>
-
-            <div class="upload-actions-row">
-              <input class="input" type="search" placeholder="Search text fields" data-content-search />
-              <button class="btn btn-outline-plain" type="button" data-content-reset>Reset to Default Text</button>
-            </div>
-
-            <form class="content-form" data-content-form>
-              <div class="content-fields" data-content-fields></div>
-              <div class="form-buttons">
-                <button class="btn btn-primary" type="submit">Save Content Text</button>
-              </div>
-              <p class="portal-status" data-content-status aria-live="polite"></p>
-            </form>
-          </section>
-        </div>
-      </section>
+        </section>
     </main>
 
     <script src="assets/cms-store.js"></script>
     <script src="assets/news-data.js"></script>
     <script src="assets/content-schema.js"></script>
     <script src="assets/portal.js"></script>
-  </body>
+</body>
+
 </html>
