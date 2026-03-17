@@ -1,98 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="AAIA website portal section for branding and home hero background management."
-    />
+    <meta name="description" content="AAIA website portal section for branding and home hero background management." />
     <title>AAIA Portal | Branding & Home</title>
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/portal.css" />
-  </head>
-  <body class="portal-page">
+</head>
+
+<body class="portal-page">
     <header class="portal-topbar">
-      <div class="container portal-topbar-inner">
-        <a class="site-logo portal-site-logo" href="portal.html" aria-label="AAIA portal home">
-          <span class="logo-mark portal-logo-fallback" data-portal-logo-fallback aria-hidden="true"></span>
-          <img class="site-logo-image portal-logo-image" data-portal-logo-image src="" alt="AAIA logo" hidden />
-        </a>
-        <a class="btn btn-light" href="index.html">Back to Website</a>
-      </div>
+        <div class="container portal-topbar-inner">
+            <a class="site-logo portal-site-logo" href="portal.html" aria-label="AAIA portal home">
+                <!-- <span class="logo-mark portal-logo-fallback" data-portal-logo-fallback aria-hidden="true"></span> -->
+                <img class="site-logo-image portal-logo-image" src="assets/logos/AAIA-logo.svg" alt="AAIA logo" />
+            </a>
+            <a class="btn btn-light" href="index.html">Back to Website</a>
+        </div>
     </header>
 
     <main class="portal-main">
-      <section class="portal-auth" data-login-view>
-        <div class="portal-card auth-card">
-          <h1>Website Console Login</h1>
-          <p>Sign in with a portal user account to manage website content.</p>
-          <form data-login-form>
-            <div class="field-wrap">
-              <label for="portal-username">Username</label>
-              <input class="input" id="portal-username" name="username" type="text" required />
+        <section class="portal-auth" data-login-view>
+            <div class="portal-card auth-card">
+                <h1>Website Console Login</h1>
+                <p>Sign in with a portal user account to manage website content.</p>
+                <form data-login-form>
+                    <div class="field-wrap">
+                        <label for="portal-username">Username</label>
+                        <input class="input" id="portal-username" name="username" type="text" required />
+                    </div>
+                    <div class="field-wrap">
+                        <label for="portal-password">Password</label>
+                        <input class="input" id="portal-password" name="password" type="password" required />
+                    </div>
+                    <button class="btn btn-primary" type="submit">Login</button>
+                    <p class="portal-status" data-login-status aria-live="polite"></p>
+                </form>
             </div>
-            <div class="field-wrap">
-              <label for="portal-password">Password</label>
-              <input class="input" id="portal-password" name="password" type="password" required />
+        </section>
+
+        <section class="portal-dashboard" data-dashboard-view hidden>
+            <div class="container">
+                <div class="portal-dashboard-head">
+                    <div>
+                        <h1>Branding &amp; Home Management</h1>
+                        <p>Update the global website logo and home hero background photos.</p>
+                    </div>
+                    <button class="btn btn-outline-plain" type="button" data-logout>Log Out</button>
+                </div>
+
+                <nav class="portal-subnav" aria-label="Portal sections">
+                    <a class="portal-subnav-link active" href="portal-branding.html" aria-current="page">Branding &amp;
+                        Home</a>
+                    <a class="portal-subnav-link" href="portal-partners.html">Partner Logos</a>
+                    <a class="portal-subnav-link" href="portal-news.html">News Manager</a>
+                    <a class="portal-subnav-link" href="portal-content.html">Content &amp; Text</a>
+                    <a class="portal-subnav-link" href="portal-users.html">Users &amp; Security</a>
+                    <a class="portal-subnav-link" href="portal-ircai.html">IRCAI &amp; Placeholder</a>
+                </nav>
+
+                <section class="portal-card">
+                    <h2>1) Branding and Home Background</h2>
+                    <p class="portal-instruction">
+                        Upload one official AAIA logo to synchronize the top-left logo and footer logo across the
+                        website. Upload 1 to 3 home hero background photos for the "Home" section slideshow.
+                    </p>
+                    <div class="portal-grid two-col">
+                        <div class="upload-block">
+                            <p class="upload-title">Global AAIA Logo</p>
+                            <p class="upload-help">Preferred format: <strong>SVG</strong> (best) or transparent PNG.
+                                Recommended size: <strong>min 320 x 96 px</strong>.</p>
+                            <input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"
+                                data-upload-single="globalLogo" />
+                            <img class="upload-preview" data-preview="globalLogo" alt="Global logo preview" hidden />
+                            <button class="btn btn-outline-plain" type="button" data-clear-single="globalLogo">Clear
+                                Logo</button>
+                        </div>
+
+                        <div class="upload-block">
+                            <p class="upload-title">Home Hero Background Photos (1-3)</p>
+                            <p class="upload-help">Preferred format: JPG/WEBP. Recommended size: <strong>1920 x 1080
+                                    px</strong> or wider. Select up to 3 photos in one upload.</p>
+                            <input type="file" multiple accept="image/png,image/jpeg,image/webp"
+                                data-upload-multi="homeHeroBackgrounds" />
+                            <div class="multi-upload-grid" data-preview-group="homeHeroBackgrounds"></div>
+                            <button class="btn btn-outline-plain" type="button"
+                                data-clear-group="homeHeroBackgrounds">Clear Hero Photos</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="button" data-save-branding>Save Branding Settings</button>
+                    <p class="portal-status" data-branding-status aria-live="polite"></p>
+                </section>
             </div>
-            <button class="btn btn-primary" type="submit">Login</button>
-            <p class="portal-status" data-login-status aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
-
-      <section class="portal-dashboard" data-dashboard-view hidden>
-        <div class="container">
-          <div class="portal-dashboard-head">
-            <div>
-              <h1>Branding &amp; Home Management</h1>
-              <p>Update the global website logo and home hero background photos.</p>
-            </div>
-            <button class="btn btn-outline-plain" type="button" data-logout>Log Out</button>
-          </div>
-
-          <nav class="portal-subnav" aria-label="Portal sections">
-            <a class="portal-subnav-link active" href="portal-branding.html" aria-current="page">Branding &amp; Home</a>
-            <a class="portal-subnav-link" href="portal-partners.html">Partner Logos</a>
-            <a class="portal-subnav-link" href="portal-news.html">News Manager</a>
-            <a class="portal-subnav-link" href="portal-content.html">Content &amp; Text</a>
-            <a class="portal-subnav-link" href="portal-users.html">Users &amp; Security</a>
-            <a class="portal-subnav-link" href="portal-ircai.html">IRCAI &amp; Placeholder</a>
-          </nav>
-
-          <section class="portal-card">
-            <h2>1) Branding and Home Background</h2>
-            <p class="portal-instruction">
-              Upload one official AAIA logo to synchronize the top-left logo and footer logo across the website. Upload 1 to 3 home hero background photos for the "Home" section slideshow.
-            </p>
-            <div class="portal-grid two-col">
-              <div class="upload-block">
-                <p class="upload-title">Global AAIA Logo</p>
-                <p class="upload-help">Preferred format: <strong>SVG</strong> (best) or transparent PNG. Recommended size: <strong>min 320 x 96 px</strong>.</p>
-                <input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" data-upload-single="globalLogo" />
-                <img class="upload-preview" data-preview="globalLogo" alt="Global logo preview" hidden />
-                <button class="btn btn-outline-plain" type="button" data-clear-single="globalLogo">Clear Logo</button>
-              </div>
-
-              <div class="upload-block">
-                <p class="upload-title">Home Hero Background Photos (1-3)</p>
-                <p class="upload-help">Preferred format: JPG/WEBP. Recommended size: <strong>1920 x 1080 px</strong> or wider. Select up to 3 photos in one upload.</p>
-                <input type="file" multiple accept="image/png,image/jpeg,image/webp" data-upload-multi="homeHeroBackgrounds" />
-                <div class="multi-upload-grid" data-preview-group="homeHeroBackgrounds"></div>
-                <button class="btn btn-outline-plain" type="button" data-clear-group="homeHeroBackgrounds">Clear Hero Photos</button>
-              </div>
-            </div>
-            <button class="btn btn-primary" type="button" data-save-branding>Save Branding Settings</button>
-            <p class="portal-status" data-branding-status aria-live="polite"></p>
-          </section>
-        </div>
-      </section>
+        </section>
     </main>
 
     <script src="assets/cms-store.js"></script>
     <script src="assets/news-data.js"></script>
     <script src="assets/content-schema.js"></script>
     <script src="assets/portal.js"></script>
-  </body>
+</body>
+
 </html>
