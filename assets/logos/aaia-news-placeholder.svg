@@ -1,0 +1,24 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AAIA News Placeholder</title>
+  <desc id="desc">Branded placeholder used when a news item has no card or hero photo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="140" y1="90" x2="1460" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F2A52"/>
+      <stop offset="1" stop-color="#0A8EA4"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="680" y1="286" x2="920" y2="526" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2FD2E3"/>
+      <stop offset="1" stop-color="#1A5C97"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.2">
+    <circle cx="250" cy="170" r="180" fill="#8EDDE8"/>
+    <circle cx="1360" cy="740" r="280" fill="#8EDDE8"/>
+  </g>
+  <rect x="680" y="286" width="240" height="240" rx="46" fill="url(#badge)"/>
+  <rect x="740" y="398" width="120" height="16" rx="8" fill="#F7FCFF"/>
+  <rect x="792" y="346" width="16" height="120" rx="8" fill="#F7FCFF"/>
+  <text x="800" y="620" text-anchor="middle" fill="#F3FBFF" font-family="'Cormorant Garamond', serif" font-size="82" font-weight="700" letter-spacing="2">AAIA</text>
+  <text x="800" y="684" text-anchor="middle" fill="#D7EEFA" font-family="'Source Sans 3', Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="1.8">NEWS IMAGE PLACEHOLDER</text>
+</svg>

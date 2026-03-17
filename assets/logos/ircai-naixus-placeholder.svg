@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="150" viewBox="0 0 620 150" role="img" aria-label="IRCAI NAIXUS Network logo placeholder">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f4a8f"/>
+      <stop offset="1" stop-color="#1ea6bd"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d3f75"/>
+      <stop offset="1" stop-color="#2ca0b2"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="618" height="148" rx="18" fill="#ffffff" stroke="#d8e2ef"/>
+
+  <rect x="22" y="24" width="130" height="102" rx="16" fill="url(#g1)"/>
+  <circle cx="87" cy="75" r="34" fill="rgba(255,255,255,0.16)"/>
+  <text x="87" y="83" text-anchor="middle" font-family="Source Sans 3, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">IR</text>
+
+  <rect x="164" y="24" width="130" height="102" rx="16" fill="url(#g2)"/>
+  <circle cx="229" cy="75" r="34" fill="rgba(255,255,255,0.16)"/>
+  <text x="229" y="83" text-anchor="middle" font-family="Source Sans 3, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">NX</text>
+
+  <text x="314" y="62" font-family="Source Sans 3, Arial, sans-serif" font-size="27" font-weight="700" fill="#0f2a52">IRCAI NAIXUS NETWORK</text>
+  <text x="314" y="89" font-family="Source Sans 3, Arial, sans-serif" font-size="16" font-weight="600" fill="#6280a1">Logo Placeholder (Replace with official asset)</text>
+</svg>

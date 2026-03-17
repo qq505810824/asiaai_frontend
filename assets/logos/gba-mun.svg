@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="110" viewBox="0 0 320 110" role="img" aria-label="Greater Bay MUN logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#183d68"/>
+      <stop offset="1" stop-color="#2b8abb"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="318" height="108" rx="16" fill="#ffffff" stroke="#d6e0ed"/>
+  <rect x="16" y="15" width="80" height="80" rx="18" fill="url(#g)"/>
+  <circle cx="56" cy="55" r="28" fill="rgba(255,255,255,0.16)"/>
+  <text x="56" y="62" text-anchor="middle" font-family="Source Sans 3, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">GB</text>
+  <text x="110" y="52" font-family="Source Sans 3, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f2a52">Greater Bay MUN</text>
+  <text x="110" y="73" font-family="Source Sans 3, Arial, sans-serif" font-size="12" font-weight="600" fill="#6280a1">Flagship Conference</text>
+</svg>

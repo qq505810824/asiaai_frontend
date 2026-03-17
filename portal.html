@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AAIA website management portal for branding, partner logos, and news management."
+    />
+    <title>AAIA Management Portal</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/portal.css" />
+  </head>
+  <body class="portal-page">
+    <header class="portal-topbar">
+      <div class="container portal-topbar-inner">
+        <a class="site-logo portal-site-logo" href="portal.html" aria-label="AAIA portal home">
+          <span class="logo-mark portal-logo-fallback" data-portal-logo-fallback aria-hidden="true"></span>
+          <img class="site-logo-image portal-logo-image" data-portal-logo-image src="" alt="AAIA logo" hidden />
+        </a>
+        <a class="btn btn-light" href="index.html">Back to Website</a>
+      </div>
+    </header>
+
+    <main class="portal-main">
+      <section class="portal-auth" data-login-view>
+        <div class="portal-card auth-card">
+          <h1>Website Console Login</h1>
+          <p>Sign in with a portal user account to manage website content.</p>
+          <form data-login-form>
+            <div class="field-wrap">
+              <label for="portal-username">Username</label>
+              <input class="input" id="portal-username" name="username" type="text" required />
+            </div>
+            <div class="field-wrap">
+              <label for="portal-password">Password</label>
+              <input class="input" id="portal-password" name="password" type="password" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Login</button>
+            <p class="portal-status" data-login-status aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="portal-dashboard" data-dashboard-view hidden>
+        <div class="container">
+          <div class="portal-dashboard-head">
+            <div>
+              <h1>AAIA Website Management Console</h1>
+              <p>All updates are saved in your browser storage for this local site instance.</p>
+            </div>
+            <button class="btn btn-outline-plain" type="button" data-logout>Log Out</button>
+          </div>
+
+          <nav class="portal-subnav" aria-label="Portal sections">
+            <a class="portal-subnav-link" href="portal-branding.html">Branding &amp; Home</a>
+            <a class="portal-subnav-link" href="portal-partners.html">Partner Logos</a>
+            <a class="portal-subnav-link" href="portal-news.html">News Manager</a>
+            <a class="portal-subnav-link" href="portal-content.html">Content &amp; Text</a>
+            <a class="portal-subnav-link" href="portal-users.html">Users &amp; Security</a>
+            <a class="portal-subnav-link" href="portal-ircai.html">IRCAI &amp; Placeholder</a>
+          </nav>
+
+          <section class="portal-card">
+            <h2>Management Sections</h2>
+            <p class="portal-instruction">
+              Use the dedicated subpages below to manage each part of the website. This keeps uploads and editing workflows clean and easier to maintain.
+            </p>
+            <div class="portal-overview-grid">
+              <a class="portal-overview-item" href="portal-branding.html">
+                <h3>1) Branding &amp; Home Background</h3>
+                <p>Upload the global AAIA logo and set 1 to 3 hero background photos for the home section.</p>
+              </a>
+              <a class="portal-overview-item" href="portal-partners.html">
+                <h3>2) Strategic Partners Logo Library</h3>
+                <p>Add, rename, and remove partner logos used in the two-row marquee section.</p>
+              </a>
+              <a class="portal-overview-item" href="portal-news.html">
+                <h3>3) Latest News Manager</h3>
+                <p>Create, edit, and publish news with date, body, card image, hero image, and gallery.</p>
+              </a>
+              <a class="portal-overview-item" href="portal-content.html">
+                <h3>4) Content &amp; UI Text Manager</h3>
+                <p>Edit homepage, newsroom, detail page, form labels, and footer text from one place.</p>
+              </a>
+              <a class="portal-overview-item" href="portal-ircai.html">
+                <h3>5) IRCAI &amp; News Placeholder</h3>
+                <p>Upload the IRCAI / NAIXUS hero logo and optional fallback image for news without photos.</p>
+              </a>
+              <a class="portal-overview-item" href="portal-users.html">
+                <h3>6) Users &amp; Security</h3>
+                <p>Add portal users and change passwords without editing source files.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/cms-store.js"></script>
+    <script src="assets/news-data.js"></script>
+    <script src="assets/content-schema.js"></script>
+    <script src="assets/portal.js"></script>
+  </body>
+</html>

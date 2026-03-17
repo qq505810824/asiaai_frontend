@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Read AAIA news article details and updates on partnerships, events, and innovation outcomes across Asia-Pacific."
+    />
+    <title>AAIA News | Article</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="news-detail-page">
+    <header class="site-header" data-site-header data-transparent="false">
+      <div class="container navbar">
+        <a class="site-logo" href="index.html" aria-label="AAIA home">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <img class="site-logo-image" data-site-logo-image src="" alt="AAIA logo" hidden />
+          <span class="site-logo-text">AAIA</span>
+        </a>
+
+        <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-label="Open navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="index.html#about">About</a></li>
+            <li><a class="nav-link active" href="news.html">Events &amp; News</a></li>
+            <li><a class="nav-link" href="index.html#partners">Partners</a></li>
+            <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+            <li class="nav-cta"><a class="btn btn-primary" href="index.html#partner-form">Partner With Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <img data-article-hero-image src="" alt="AAIA news hero image" />
+      </section>
+
+      <section class="article-header">
+        <div class="container">
+          <div class="article-header-card reveal">
+            <div class="article-header-top">
+              <a class="back-link" href="news.html">&larr; Back to Events &amp; News</a>
+              <div class="news-language-switch compact" data-news-language-switch aria-label="News language switch">
+                <span class="news-language-label" data-news-language-label>Language</span>
+                <div class="news-language-buttons">
+                  <button class="news-language-btn" type="button" data-news-lang-btn="en" aria-pressed="true">Eng</button>
+                  <button class="news-language-btn" type="button" data-news-lang-btn="zh" aria-pressed="false">繁</button>
+                </div>
+              </div>
+            </div>
+            <h1 class="article-title" data-article-title></h1>
+            <div class="article-meta" data-article-meta></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-shell">
+        <div class="container article-layout">
+          <article class="article-content reveal">
+            <div data-article-content></div>
+            <div class="inline-gallery" data-article-gallery></div>
+          </article>
+
+          <aside class="article-sidebar">
+            <section class="panel reveal" data-delay="0.08s">
+              <h3>Details</h3>
+              <ul data-article-facts></ul>
+            </section>
+
+            <section class="panel reveal" data-delay="0.16s">
+              <h3>Share</h3>
+              <div class="share-row">
+                <button class="share-btn" data-share="linkedin" type="button">LinkedIn</button>
+                <button class="share-btn" data-share="x" type="button">X</button>
+                <button class="share-btn" data-share="copy" type="button">Copy Link</button>
+                <button class="share-btn" data-share="native" type="button">Share</button>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <div class="container related-news">
+          <h2 class="reveal">Related News</h2>
+          <div class="news-grid" data-related-news></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <div class="footer-shell">
+          <div class="footer-card footer-brand-card">
+            <a class="site-logo" href="index.html" aria-label="AAIA home">
+              <span class="logo-mark" aria-hidden="true"></span>
+              <img class="site-logo-image" data-site-logo-image src="" alt="AAIA logo" hidden />
+              <span class="site-logo-text">AAIA</span>
+            </a>
+            <p>
+              The Asia Artificial Intelligence Alliance is a cross-sector institutional network connecting education, technology, and policy partners to empower future innovators across Asia-Pacific.
+            </p>
+            <div class="footer-pill-row">
+              <span class="footer-pill">UNESCO IRCAI NAIXUS Official Partner</span>
+              <span class="footer-pill">Cross-Sector Alliance</span>
+              <span class="footer-pill">Asia-Pacific Network</span>
+            </div>
+          </div>
+
+          <div class="footer-card footer-contact-card">
+            <p class="footer-title">Institutional Contact</p>
+            <a class="footer-email" href="mailto:info@asiaai.org">info@asiaai.org</a>
+            <p class="footer-note">For partnership proposals, event collaboration, and institutional inquiries.</p>
+            <a class="btn btn-primary footer-btn" href="index.html#partner-form">Open Partnership Form</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">&copy; <span data-year></span> Asia Artificial Intelligence Alliance. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="assets/cms-store.js"></script>
+    <script src="assets/news-data.js"></script>
+    <script src="assets/content-schema.js"></script>
+    <script src="assets/app.js"></script>
+    <script src="assets/news-detail.js"></script>
+  </body>
+</html>

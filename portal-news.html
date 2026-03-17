@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AAIA website portal section for news listing and detail content management."
+    />
+    <title>AAIA Portal | News Manager</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/portal.css" />
+  </head>
+  <body class="portal-page">
+    <header class="portal-topbar">
+      <div class="container portal-topbar-inner">
+        <a class="site-logo portal-site-logo" href="portal.html" aria-label="AAIA portal home">
+          <span class="logo-mark portal-logo-fallback" data-portal-logo-fallback aria-hidden="true"></span>
+          <img class="site-logo-image portal-logo-image" data-portal-logo-image src="" alt="AAIA logo" hidden />
+        </a>
+        <a class="btn btn-light" href="index.html">Back to Website</a>
+      </div>
+    </header>
+
+    <main class="portal-main">
+      <section class="portal-auth" data-login-view>
+        <div class="portal-card auth-card">
+          <h1>Website Console Login</h1>
+          <p>Sign in with a portal user account to manage website content.</p>
+          <form data-login-form>
+            <div class="field-wrap">
+              <label for="portal-username">Username</label>
+              <input class="input" id="portal-username" name="username" type="text" required />
+            </div>
+            <div class="field-wrap">
+              <label for="portal-password">Password</label>
+              <input class="input" id="portal-password" name="password" type="password" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Login</button>
+            <p class="portal-status" data-login-status aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="portal-dashboard" data-dashboard-view hidden>
+        <div class="container">
+          <div class="portal-dashboard-head">
+            <div>
+              <h1>Latest News Manager</h1>
+              <p>Create and maintain newsroom entries and article detail pages.</p>
+            </div>
+            <button class="btn btn-outline-plain" type="button" data-logout>Log Out</button>
+          </div>
+
+          <nav class="portal-subnav" aria-label="Portal sections">
+            <a class="portal-subnav-link" href="portal-branding.html">Branding &amp; Home</a>
+            <a class="portal-subnav-link" href="portal-partners.html">Partner Logos</a>
+            <a class="portal-subnav-link active" href="portal-news.html" aria-current="page">News Manager</a>
+            <a class="portal-subnav-link" href="portal-content.html">Content &amp; Text</a>
+            <a class="portal-subnav-link" href="portal-users.html">Users &amp; Security</a>
+            <a class="portal-subnav-link" href="portal-ircai.html">IRCAI &amp; Placeholder</a>
+          </nav>
+
+          <section class="portal-card">
+            <h2>3) Latest News Manager</h2>
+            <p class="portal-instruction">
+              Create and manage each news item. Required fields include slug, date, and at least one language for title and overview/body content. Optional visual fields include card photo, hero photo, and gallery photos.
+            </p>
+            <p class="portal-instruction compact">
+              You can publish in English only, Traditional Chinese only, or both. Hero Photo controls the large horizontal image behind the title on detail page. If card/hero is empty, website will use the AAIA branded placeholder image automatically.
+            </p>
+
+            <div class="upload-actions-row">
+              <button class="btn btn-primary" type="button" data-open-news-form>Add News</button>
+              <p class="portal-instruction compact">Click Add News to open the form. Existing entries stay visible below.</p>
+            </div>
+
+            <section data-news-editor hidden>
+              <form class="news-form" data-news-form>
+                <input type="hidden" name="editing_slug" data-editing-slug />
+
+                <div class="portal-grid two-col">
+                  <div class="field-wrap">
+                    <label for="news-title-en">News Title (Eng)</label>
+                    <input class="input" id="news-title-en" name="title_en" type="text" />
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="news-title-zh">News Title (繁體中文)</label>
+                    <input class="input" id="news-title-zh" name="title_zh" type="text" />
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="news-slug">Slug * (URL)</label>
+                    <div class="slug-row">
+                      <input class="input" id="news-slug" name="slug" type="text" required />
+                      <button class="btn btn-outline-plain" type="button" data-generate-slug>Auto</button>
+                    </div>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="news-date">Date *</label>
+                    <input class="input" id="news-date" name="date" type="date" required />
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="news-featured">Featured Story</label>
+                    <select class="select" id="news-featured" name="featured">
+                      <option value="false">No</option>
+                      <option value="true">Yes</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="portal-grid two-col">
+                  <div class="field-wrap">
+                    <label for="news-content-en">Overview / Body Content (Eng)</label>
+                    <textarea
+                      class="textarea"
+                      id="news-content-en"
+                      name="content_en"
+                      rows="8"
+                      placeholder="Write paragraphs separated by one blank line."
+                    ></textarea>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="news-content-zh">Overview / Body Content (繁體中文)</label>
+                    <textarea
+                      class="textarea"
+                      id="news-content-zh"
+                      name="content_zh"
+                      rows="8"
+                      placeholder="請以空行分段。"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="portal-grid two-col">
+                  <div class="field-wrap">
+                    <label for="news-quote-en">Highlight Quote (Eng, optional)</label>
+                    <textarea class="textarea" id="news-quote-en" name="quote_en" rows="3"></textarea>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="news-quote-zh">Highlight Quote (繁體中文, optional)</label>
+                    <textarea class="textarea" id="news-quote-zh" name="quote_zh" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div class="portal-grid two-col">
+                  <div class="upload-block">
+                    <p class="upload-title">Card Photo (Listing, Optional)</p>
+                    <p class="upload-help">
+                      Optional. Recommended: 1400 x 900 px, JPG or WEBP. If empty, listing will use Hero Photo automatically when available.
+                    </p>
+                    <input type="file" accept="image/png,image/jpeg,image/webp" data-news-upload="image" />
+                    <img class="upload-preview" data-news-preview="image" alt="News image preview" hidden />
+                    <button class="btn btn-outline-plain" type="button" data-generate-card-from-hero>Use Hero as Card Photo</button>
+                    <button class="btn btn-outline-plain" type="button" data-clear-news-image="image">Clear Card Photo</button>
+                  </div>
+
+                  <div class="upload-block">
+                    <p class="upload-title">Hero Photo (Detail Page Top Banner, Optional)</p>
+                    <p class="upload-help">Optional. Recommended: 2000 x 900 px. If empty, AAIA placeholder image will be shown.</p>
+                    <input type="file" accept="image/png,image/jpeg,image/webp" data-news-upload="heroImage" />
+                    <img class="upload-preview" data-news-preview="heroImage" alt="News hero preview" hidden />
+                    <button class="btn btn-outline-plain" type="button" data-clear-news-image="heroImage">Clear Hero Photo</button>
+                  </div>
+                </div>
+
+                <div class="upload-block">
+                  <p class="upload-title">Inline Gallery Photos (optional)</p>
+                  <p class="upload-help">Upload multiple images for detail-page gallery block.</p>
+                  <input type="file" multiple accept="image/png,image/jpeg,image/webp" data-news-gallery-upload />
+                  <div class="gallery-preview-grid" data-news-gallery-preview></div>
+                  <button class="btn btn-outline-plain" type="button" data-clear-news-gallery>Clear Gallery</button>
+                </div>
+
+                <div class="form-buttons">
+                  <button class="btn btn-primary" type="submit">Save News Entry</button>
+                  <button class="btn btn-outline-plain" type="button" data-reset-news-form>Reset Form</button>
+                  <button class="btn btn-outline-plain" type="button" data-close-news-form>Close Editor</button>
+                </div>
+                <p class="portal-status" data-news-status aria-live="polite"></p>
+              </form>
+            </section>
+
+            <div class="news-list-wrapper">
+              <h3>Existing News Entries</h3>
+              <p class="portal-instruction compact">Use Edit to modify an entry or Delete to remove it.</p>
+              <div class="portal-grid two-col">
+                <div class="field-wrap">
+                  <label for="featured-news-select">Featured News</label>
+                  <select class="select" id="featured-news-select" data-featured-news-select>
+                    <option value="">No news available</option>
+                  </select>
+                </div>
+                <div class="field-wrap">
+                  <label>&nbsp;</label>
+                  <button class="btn btn-outline-plain" type="button" data-apply-featured-news>Set as Featured News</button>
+                </div>
+              </div>
+              <p class="portal-status" data-featured-news-status aria-live="polite"></p>
+              <div class="upload-actions-row">
+                <input
+                  class="input"
+                  type="search"
+                  placeholder="Search existing news by title, slug, or date"
+                  data-news-list-search
+                />
+              </div>
+              <div class="news-list" data-news-list></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/cms-store.js"></script>
+    <script src="assets/news-data.js"></script>
+    <script src="assets/content-schema.js"></script>
+    <script src="assets/portal.js"></script>
+  </body>
+</html>

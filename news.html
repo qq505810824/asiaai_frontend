@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Read the latest AAIA news on strategic collaborations, education forums, and youth innovation outcomes across Asia-Pacific."
+    />
+    <title>Newsroom | AAIA</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="news-page">
+    <header class="site-header" data-site-header data-transparent="false">
+      <div class="container navbar">
+        <a class="site-logo" href="index.html" aria-label="AAIA home">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <img class="site-logo-image" data-site-logo-image src="" alt="AAIA logo" hidden />
+          <span class="site-logo-text">AAIA</span>
+        </a>
+
+        <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-label="Open navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="index.html#about">About</a></li>
+            <li><a class="nav-link active" href="news.html">Events &amp; News</a></li>
+            <li><a class="nav-link" href="index.html#partners">Partners</a></li>
+            <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+            <li class="nav-cta"><a class="btn btn-primary" href="index.html#partner-form">Partner With Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">AAIA Events &amp; Newsroom</p>
+          <h1>Latest Events &amp; News</h1>
+          <p>
+            Official updates on AAIA collaborations, major events, and youth innovation milestones shaping responsible AI and education across Asia-Pacific.
+          </p>
+          <div class="news-language-switch" data-news-language-switch aria-label="News language switch">
+            <span class="news-language-label" data-news-language-label>Language</span>
+            <div class="news-language-buttons">
+              <button class="news-language-btn" type="button" data-news-lang-btn="en" aria-pressed="true">Eng</button>
+              <button class="news-language-btn" type="button" data-news-lang-btn="zh" aria-pressed="false">繁</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="filter-panel">
+        <div class="container">
+          <div class="filter-grid reveal">
+            <div class="field-wrap">
+              <label for="news-search">Search</label>
+              <input id="news-search" class="input" type="search" placeholder="Search by keyword, partner, or topic" data-news-search />
+            </div>
+          </div>
+
+          <article class="featured-story reveal" data-featured-news></article>
+        </div>
+      </section>
+
+      <section class="section newsroom-section">
+        <div class="container">
+          <div class="news-grid" data-news-grid></div>
+          <div class="pagination-wrap">
+            <button class="btn btn-primary" data-load-more>Load More News</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <div class="footer-shell">
+          <div class="footer-card footer-brand-card">
+            <a class="site-logo" href="index.html" aria-label="AAIA home">
+              <span class="logo-mark" aria-hidden="true"></span>
+              <img class="site-logo-image" data-site-logo-image src="" alt="AAIA logo" hidden />
+              <span class="site-logo-text">AAIA</span>
+            </a>
+            <p>
+              The Asia Artificial Intelligence Alliance is a cross-sector institutional network connecting education, technology, and policy partners to empower future innovators across Asia-Pacific.
+            </p>
+            <div class="footer-pill-row">
+              <span class="footer-pill">UNESCO IRCAI NAIXUS Official Partner</span>
+              <span class="footer-pill">Cross-Sector Alliance</span>
+              <span class="footer-pill">Asia-Pacific Network</span>
+            </div>
+          </div>
+
+          <div class="footer-card footer-contact-card">
+            <p class="footer-title">Institutional Contact</p>
+            <a class="footer-email" href="mailto:info@asiaai.org">info@asiaai.org</a>
+            <p class="footer-note">For partnership proposals, event collaboration, and institutional inquiries.</p>
+            <a class="btn btn-primary footer-btn" href="index.html#partner-form">Open Partnership Form</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">&copy; <span data-year></span> Asia Artificial Intelligence Alliance. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="assets/cms-store.js"></script>
+    <script src="assets/news-data.js"></script>
+    <script src="assets/content-schema.js"></script>
+    <script src="assets/app.js"></script>
+    <script src="assets/news-listing.js"></script>
+  </body>
+</html>
